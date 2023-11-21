@@ -6,7 +6,11 @@ body {
     color: #513a5c; /* Texto morado oscuro */
 }
 
-header {
+.header-bg {
+    background-image: url(https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 20px;
     text-align: center;
 }
