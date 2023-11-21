@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Fotos para Verenice</title>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido/a a la Página de Verenice</h1>
+    </header>
+
+    <section class="gallery">
+        <!-- Aquí puedes agregar tus fotos -->
+        <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+        <img src="imagen2.jpg" alt="Descripción de la imagen 2">
+        <!-- Agrega más imágenes según sea necesario -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Página de [Nombre de tu Novia]</p>
+    </footer>
+
+</body>
+</html>
+2. Estilos CSS (styles.css):
+css
+Copy code
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
