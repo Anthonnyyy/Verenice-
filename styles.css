@@ -7,7 +7,7 @@ body {
 }
 
 .header-bg {
-    background-image: url('tu-imagen-de-fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-image: url(https://s2.best-wallpaper.net/wallpaper/5120x2880/1902/Purple-tulips-flowers-light-pink-background_5120x2880.jpg); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
