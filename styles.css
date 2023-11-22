@@ -7,7 +7,7 @@ body {
 }
 
 .header-bg {
-    background-image: url(https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg); /* Ruta de la imagen de fondo */
+    background-image: url('tu-imagen-de-fondo.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,13 +24,14 @@ header p {
 }
 
 .note-section {
-    background-color: #dbc5e0; /* Fondo lila claro para la sección de notas */
-    padding: 20px;
+    background-color: #8b5e88; /* Fondo morado oscuro para la sección de notas */
+    padding: 40px;
     text-align: center;
+    border: 2px solid #513a5c; /* Borde morado oscuro */
 }
 
 .note-section h2 {
-    color: #8b5e88; /* Texto morado más oscuro para la sección de notas */
+    color: #ead2f4; /* Texto blanco para la sección de notas */
 }
 
 footer {
