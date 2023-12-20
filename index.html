@@ -22,6 +22,10 @@
       color: white; /* Texto blanco para mayor contraste */
     }
 
+    #title {
+      z-index: 1; /* Añadido para que el título esté sobre los demás elementos */
+    }
+
     #loginForm {
       background-color: #40296A; /* Nuevo color morado más oscuro para el área de contraseña */
       padding: 20px;
@@ -95,7 +99,7 @@
 </head>
 <body>
 
-  <h1>Bienvenido a Mi Página Privada</h1>
+  <h1 id="title">Bienvenido a Mi Página Privada</h1>
 
   <!-- Formulario de Inicio de Sesión -->
   <form id="loginForm">
@@ -121,20 +125,4 @@
       // Aquí debes verificar la contraseña, por ejemplo:
       if (password === "tu_contraseña_secreta") {
         document.getElementById("loginForm").style.display = "none";
-        document.getElementById("notesArea").style.display = "block";
-        document.body.style.backgroundColor = "#6339ad"; /* Cambio de fondo al desbloquearse */
-        document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
-      } else {
-        document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
-      }
-    }
-
-    function saveNote() {
-      var note = document.getElementById("dailyNotes").value;
-      // Aquí puedes realizar acciones con la nota, como guardarla en una base de datos.
-      alert("Nota guardada: " + note);
-    }
-  </script>
-
-</body>
-</html>
+        document.getElementById("notesArea
