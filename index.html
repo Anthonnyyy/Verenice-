@@ -25,12 +25,14 @@
     #title {
       z-index: 1; /* Añadido para que el título esté sobre los demás elementos */
       margin-top: -40px; /* Ajuste para subir el título */
-      animation: changeColor 1s infinite; /* Animación para cambiar el color del título */
+      animation: changeColor 2s infinite; /* Animación para cambiar el color del título */
     }
 
     @keyframes changeColor {
-      0%, 100% { color: white; } /* Color inicial y final (blanco) */
-      50% { color: #ff66b2; } /* Color a la mitad del intervalo (rosa) */
+      0%, 100% { color: #592869; } /* Primer color */
+      25% { color: #c443c0; } /* Segundo color */
+      50% { color: #d62b5e; } /* Tercer color */
+      75% { color: #851021; } /* Cuarto color */
     }
 
     #loginForm {
@@ -41,7 +43,6 @@
       transition: display 1s; /* Animación de cambio de visibilidad */
       border: 2px solid #6B07E3; /* Nuevo borde de color especificado */
       position: relative; /* Añadido para que el resplandor esté contenido dentro del área */
-      overflow: hidden; /* Añadido para ocultar el resplandor fuera del área */
       margin-top: -20px; /* Ajuste para subir los elementos */
     }
 
@@ -52,20 +53,6 @@
       border-radius: 5px;
       padding: 5px;
       margin-bottom: 10px; /* Nuevo margen para separar el área de contraseña del botón */
-      position: relative; /* Añadido para z-index y animación del resplandor */
-    }
-
-    #password::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-      z-index: -1;
-      background: radial-gradient(circle, #ff66b2 20%, transparent 25%);
-      background-size: 200% 200%;
-      animation: pulsate 1.5s infinite;
     }
 
     button {
@@ -87,14 +74,6 @@
       margin-top: 20px;
     }
 
-    /* Nueva animación para el resplandor del área de texto */
-    @keyframes pulsate {
-      0% { background-size: 200% 200%; }
-      50% { background-size: 150% 150%; }
-      100% { background-size: 200% 200%; }
-    }
-
-    /* Nuevo estilo para el borde del área de texto */
     textarea {
       background-color: #684B9F; /* Nuevo color morado más claro para el área de texto */
       color: white;
