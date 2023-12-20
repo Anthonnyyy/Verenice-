@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
-      background-color: #800080; /* Nuevo color morado fuerte para el fondo */
+      background-color: #684B9F; /* Nuevo color morado fuerte para el fondo */
       transition: background-color 1s; /* Animación de cambio de color */
     }
 
@@ -18,22 +18,23 @@
     }
 
     #loginForm {
-      background-color: #4b004b; /* Nuevo color morado más oscuro para el área de contraseña */
+      background-color: #40296A; /* Nuevo color morado más oscuro para el área de contraseña */
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
       transition: display 1s; /* Animación de cambio de visibilidad */
-      border: 2px solid #330033; /* Nuevo borde de color morado oscuro */
+      border: 2px solid #684B9F; /* Nuevo borde de color morado fuerte */
       position: relative; /* Añadido para que el resplandor esté contenido dentro del área */
       overflow: hidden; /* Añadido para ocultar el resplandor fuera del área */
     }
 
     #password {
-      background-color: #6a006a; /* Nuevo color morado más claro para el área de texto */
+      background-color: #684B9F; /* Nuevo color morado más claro para el área de texto */
       color: white;
-      border: 2px solid #330033; /* Nuevo borde de color morado oscuro */
+      border: 2px solid #684B9F; /* Nuevo borde de color morado fuerte */
       border-radius: 5px;
       padding: 5px;
+      margin-bottom: 10px; /* Nuevo margen para separar el área de contraseña del botón */
       position: relative; /* Añadido para z-index y animación del resplandor */
     }
 
@@ -51,17 +52,17 @@
     }
 
     button {
-      background-color: #800080; /* Nuevo color morado fuerte para el botón */
+      background-color: #684B9F; /* Nuevo color morado fuerte para el botón */
       color: white; /* Texto blanco para mayor contraste */
       padding: 10px;
-      border: 2px solid #330033; /* Nuevo borde de color morado oscuro */
-      border-radius: 5px; /* Nuevo borde de color morado oscuro */
+      border: 2px solid #684B9F; /* Nuevo borde de color morado fuerte */
+      border-radius: 5px; /* Nuevo borde de color morado fuerte */
       cursor: pointer;
       transition: background-color 0.5s; /* Animación de cambio de color del botón */
     }
 
     button:hover {
-      background-color: #4b004b; /* Cambio de color al pasar el mouse */
+      background-color: #40296A; /* Cambio de color al pasar el mouse */
     }
 
     #notesArea {
@@ -78,9 +79,9 @@
 
     /* Nuevo estilo para el borde del área de texto */
     textarea {
-      background-color: #6a006a; /* Nuevo color morado más claro para el área de texto */
+      background-color: #684B9F; /* Nuevo color morado más claro para el área de texto */
       color: white;
-      border: 2px solid #330033; /* Nuevo borde de color morado oscuro */
+      border: 2px solid #684B9F; /* Nuevo borde de color morado fuerte */
       border-radius: 5px;
       padding: 5px;
     }
@@ -93,6 +94,7 @@
   <!-- Formulario de Inicio de Sesión -->
   <form id="loginForm">
     <label for="password" style="color: white;">Contraseña:</label>
+    <br>
     <input type="password" id="password" required>
     <br>
     <button type="button" onclick="checkPassword()">OK</button>
@@ -114,7 +116,7 @@
       if (password === "tu_contraseña_secreta") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
-        document.body.style.backgroundColor = "#6a006a"; /* Cambio de fondo al desbloquearse */
+        document.body.style.backgroundColor = "#684B9F"; /* Cambio de fondo al desbloquearse */
         document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
       } else {
         document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
