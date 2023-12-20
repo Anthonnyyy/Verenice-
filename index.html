@@ -25,6 +25,12 @@
     #title {
       z-index: 1; /* Añadido para que el título esté sobre los demás elementos */
       margin-top: -40px; /* Ajuste para subir el título */
+      animation: changeColor 1s infinite; /* Animación para cambiar el color del título */
+    }
+
+    @keyframes changeColor {
+      0%, 100% { color: white; } /* Color inicial y final (blanco) */
+      50% { color: #ff66b2; } /* Color a la mitad del intervalo (rosa) */
     }
 
     #loginForm {
