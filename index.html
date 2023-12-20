@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
-      background-color: #c8a2c8; /* Nuevo color lila */
+      background-color: #800080; /* Nuevo color morado fuerte para el fondo */
       transition: background-color 1s; /* Animación de cambio de color */
     }
 
@@ -18,16 +18,16 @@
     }
 
     #loginForm {
-      background-color: #800080; /* Nuevo color morado para el área de contraseña */
+      background-color: #4b004b; /* Nuevo color morado más oscuro para el área de contraseña */
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
       transition: display 1s; /* Animación de cambio de visibilidad */
-      border: 2px solid #800080; /* Nuevo borde de color morado */
+      border: 2px solid #4b004b; /* Nuevo borde de color morado más oscuro */
     }
 
     button {
-      background-color: #800080; /* Nuevo color morado para el botón */
+      background-color: #800080; /* Nuevo color morado fuerte para el botón */
       color: white; /* Texto blanco para mayor contraste */
       padding: 10px;
       border: none;
@@ -53,7 +53,7 @@
   <!-- Formulario de Inicio de Sesión -->
   <form id="loginForm">
     <label for="password" style="color: white;">Contraseña:</label>
-    <input type="password" id="password" required>
+    <input type="password" id="password" required style="background-color: #6a006a; color: white;"> <!-- Nuevo color morado más claro para el área de texto -->
     <br>
     <button type="button" onclick="checkPassword()">OK</button>
     <p id="errorText" style="color: red;"></p> <!-- Nuevo elemento para mostrar mensajes de error -->
@@ -62,7 +62,7 @@
   <!-- Área de Notas Diarias -->
   <div id="notesArea">
     <h2>Notas Diarias</h2>
-    <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..."></textarea>
+    <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..." style="background-color: #6a006a; color: white;"></textarea> <!-- Nuevo color morado más claro para el área de texto -->
     <br>
     <button onclick="saveNote()">Guardar Nota</button>
   </div>
@@ -74,7 +74,7 @@
       if (password === "tu_contraseña_secreta") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
-        document.body.style.backgroundColor = "white"; /* Cambio de fondo al desbloquearse */
+        document.body.style.backgroundColor = "#6a006a"; /* Cambio de fondo al desbloquearse */
         document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
       } else {
         document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
