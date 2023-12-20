@@ -45,7 +45,7 @@
       right: -5px;
       bottom: -5px;
       z-index: -1;
-      background: radial-gradient(circle, #ff0 20%, transparent 25%);
+      background: radial-gradient(circle, #ff66b2 20%, transparent 25%);
       background-size: 200% 200%;
       animation: pulsate 1.5s infinite;
     }
@@ -69,7 +69,7 @@
       margin-top: 20px;
     }
 
-    /* Nueva animación simplificada para el resplandor del área de texto */
+    /* Nueva animación para el resplandor del área de texto */
     @keyframes pulsate {
       0% { background-size: 200% 200%; }
       50% { background-size: 150% 150%; }
@@ -102,4 +102,31 @@
   <!-- Área de Notas Diarias -->
   <div id="notesArea">
     <h2>Notas Diarias</h2>
-    <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí...
+    <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..."></textarea>
+    <br>
+    <button onclick="saveNote()">Guardar Nota</button>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      // Aquí debes verificar la contraseña, por ejemplo:
+      if (password === "tu_contraseña_secreta") {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("notesArea").style.display = "block";
+        document.body.style.backgroundColor = "#6a006a"; /* Cambio de fondo al desbloquearse */
+        document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
+      } else {
+        document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
+      }
+    }
+
+    function saveNote() {
+      var note = document.getElementById("dailyNotes").value;
+      // Aquí puedes realizar acciones con la nota, como guardarla en una base de datos.
+      alert("Nota guardada: " + note);
+    }
+  </script>
+
+</body>
+</html>
