@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Privada</title>
+  <title>Hola mi amor</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -33,7 +33,7 @@
 </head>
 <body>
 
-  <h1>Hola mi amor</h1>
+  <h1>Bienvenido a Mi Página Privada</h1>
 
   <!-- Formulario de Inicio de Sesión -->
   <form id="loginForm">
@@ -41,6 +41,7 @@
     <input type="password" id="password" required>
     <br>
     <button type="button" onclick="checkPassword()">Iniciar Sesión</button>
+    <p id="errorText" style="color: red;"></p> <!-- Nuevo elemento para mostrar mensajes de error -->
   </form>
 
   <!-- Área de Notas Diarias -->
@@ -59,8 +60,9 @@
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
         document.body.style.backgroundColor = "white"; /* Cambio de fondo al desbloquearse */
+        document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
       } else {
-        alert("Contraseña incorrecta. Inténtalo de nuevo.");
+        document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
       }
     }
 
