@@ -3,26 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hola mi amor</title>
+  <title>Mi Página Privada</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
-      background-color: violet; /* Nuevo fondo violeta */
+      background-color: #c8a2c8; /* Nuevo color lila */
       transition: background-color 1s; /* Animación de cambio de color */
     }
 
-    h1, label, button {
+    h1, label {
       color: white; /* Texto blanco para mayor contraste */
     }
 
     #loginForm {
-      background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el formulario */
+      background-color: #800080; /* Nuevo color morado para el área de contraseña */
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
       transition: display 1s; /* Animación de cambio de visibilidad */
+      border: 2px solid #800080; /* Nuevo borde de color morado */
+    }
+
+    button {
+      background-color: #800080; /* Nuevo color morado para el botón */
+      color: white; /* Texto blanco para mayor contraste */
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s; /* Animación de cambio de color del botón */
+    }
+
+    button:hover {
+      background-color: #4b004b; /* Cambio de color al pasar el mouse */
     }
 
     #notesArea {
@@ -37,10 +52,10 @@
 
   <!-- Formulario de Inicio de Sesión -->
   <form id="loginForm">
-    <label for="password">Contraseña:</label>
+    <label for="password" style="color: white;">Contraseña:</label>
     <input type="password" id="password" required>
     <br>
-    <button type="button" onclick="checkPassword()">Iniciar Sesión</button>
+    <button type="button" onclick="checkPassword()">OK</button>
     <p id="errorText" style="color: red;"></p> <!-- Nuevo elemento para mostrar mensajes de error -->
   </form>
 
@@ -56,7 +71,7 @@
     function checkPassword() {
       var password = document.getElementById("password").value;
       // Aquí debes verificar la contraseña, por ejemplo:
-      if (password === "2023") {
+      if (password === "tu_contraseña_secreta") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
         document.body.style.backgroundColor = "white"; /* Cambio de fondo al desbloquearse */
