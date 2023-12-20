@@ -18,23 +18,18 @@
       transition: background 1s;
     }
 
-    h1, label {
+    h1, label, button, #errorText {
       color: white;
-      font-family: "Brush Script MT", cursive;
+    }
+
+    h1 {
+      font-family: "ADLaM Display", cursive;
       font-weight: bold;
-    }
-
-    label[for="password"] {
-      font-family: Arial, sans-serif;
-    }
-
-    #title {
-      z-index: 1;
+      font-size: 36px;
       margin-top: -40px;
       animation: changeColor 2s infinite;
       -webkit-text-stroke: 0.5px #e66376;
       text-stroke: 0.5px #e66376;
-      font-size: 36px;
     }
 
     @keyframes changeColor {
@@ -44,7 +39,7 @@
       75% { color: #851021; }
     }
 
-    #loginForm {
+    #loginForm, #notesArea {
       background-color: #40296A;
       padding: 20px;
       border-radius: 10px;
@@ -55,7 +50,7 @@
       margin-top: -20px;
     }
 
-    #password {
+    #password, textarea {
       background-color: #684B9F;
       color: white;
       font-family: Arial, sans-serif;
@@ -67,7 +62,6 @@
 
     button {
       background-color: #684B9F;
-      color: white;
       padding: 10px;
       border: 2px solid #6B07E3;
       border-radius: 5px;
@@ -83,23 +77,14 @@
       display: none;
       margin-top: 20px;
     }
-
-    textarea {
-      background-color: #684B9F;
-      color: white;
-      border: 2px solid #6B07E3;
-      border-radius: 5px;
-      padding: 5px;
-    }
   </style>
 </head>
 <body>
 
-  <h1 id="title">Bienvenida Amor❤️👑</h1>
+  <h1>Bienvenida Amor❤️👑</h1>
 
-  <!-- Formulario de Inicio de Sesión -->
   <form id="loginForm">
-    <label for="password" style="color: white;">Contraseña:</label>
+    <label for="password">Contraseña:</label>
     <br>
     <input type="password" id="password" required>
     <br>
@@ -107,7 +92,6 @@
     <p id="errorText" style="color: red;"></p>
   </form>
 
-  <!-- Área de Notas Diarias -->
   <div id="notesArea">
     <h2>Notas Diarias</h2>
     <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..."></textarea>
@@ -121,7 +105,6 @@
       if (password === "31/05/2023") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
-        document.getElementById("title").style.marginTop = "-20px";
         document.body.style.backgroundColor = "#6339ad";
         document.getElementById("errorText").textContent = "";
       } else {
