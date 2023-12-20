@@ -123,8 +123,24 @@
   <script>
     function checkPassword() {
       var password = document.getElementById("password").value;
-      // Aquí debes verificar la contraseña, por ejemplo:
-      if (password === "tu_contraseña_secreta") {
+      // Verificar la contraseña
+      if (password === "31/05/2023") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
-        document.getElementById("title
+        document.getElementById("title").style.marginTop = "-20px"; // Ajuste de posición del título
+        document.body.style.backgroundColor = "#6339ad"; /* Cambio de fondo al desbloquearse */
+        document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
+      } else {
+        document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
+      }
+    }
+
+    function saveNote() {
+      var note = document.getElementById("dailyNotes").value;
+      // Aquí puedes realizar acciones con la nota, como guardarla en una base de datos.
+      alert("Nota guardada: " + note);
+    }
+  </script>
+
+</body>
+</html>
