@@ -12,61 +12,61 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh; /* 100% de la altura de la ventana */
-      margin: 0; /* Eliminar margen predeterminado */
-      background-color: #6339ad; /* Nuevo color de fondo según tu preferencia */
-      transition: background-color 1s; /* Animación de cambio de color */
+      height: 100vh;
+      margin: 0;
+      background: url("https://i.pinimg.com/originals/a0/eb/7e/a0eb7e284058a7507395764636749c72.png") center center/cover fixed no-repeat; /* Nueva imagen de fondo */
+      transition: background 1s;
     }
 
     h1, label {
-      color: white; /* Texto blanco para mayor contraste */
+      color: white;
     }
 
     #title {
-      z-index: 1; /* Añadido para que el título esté sobre los demás elementos */
-      margin-top: -60px; /* Ajuste para subir el título aún más */
-      animation: changeColor 2s infinite; /* Animación para cambiar el color del título */
+      z-index: 1;
+      margin-top: -40px;
+      animation: changeColor 2s infinite;
     }
 
     @keyframes changeColor {
-      0%, 100% { color: #592869; } /* Primer color */
-      25% { color: #c443c0; } /* Segundo color */
-      50% { color: #d62b5e; } /* Tercer color */
-      75% { color: #851021; } /* Cuarto color */
+      0%, 100% { color: #592869; }
+      25% { color: #c443c0; }
+      50% { color: #d62b5e; }
+      75% { color: #851021; }
     }
 
     #loginForm {
-      background-color: #40296A; /* Nuevo color morado más oscuro para el área de contraseña */
+      background-color: #40296A;
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
-      transition: display 1s; /* Animación de cambio de visibilidad */
-      border: 2px solid #6B07E3; /* Nuevo borde de color especificado */
-      position: relative; /* Añadido para que el resplandor esté contenido dentro del área */
-      margin-top: -40px; /* Ajuste para subir los elementos */
+      transition: display 1s;
+      border: 2px solid #6B07E3;
+      position: relative;
+      margin-top: -20px;
     }
 
     #password {
-      background-color: #684B9F; /* Nuevo color morado más claro para el área de texto */
+      background-color: #684B9F;
       color: white;
-      border: 2px solid #6B07E3; /* Nuevo borde de color especificado */
+      border: 2px solid #6B07E3;
       border-radius: 5px;
       padding: 5px;
-      margin-bottom: 10px; /* Nuevo margen para separar el área de contraseña del botón */
+      margin-bottom: 10px;
     }
 
     button {
-      background-color: #684B9F; /* Nuevo color morado fuerte para el botón */
-      color: white; /* Texto blanco para mayor contraste */
+      background-color: #684B9F;
+      color: white;
       padding: 10px;
-      border: 2px solid #6B07E3; /* Nuevo borde de color especificado */
-      border-radius: 5px; /* Nuevo borde de color morado fuerte */
+      border: 2px solid #6B07E3;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.5s; /* Animación de cambio de color del botón */
+      transition: background-color 0.5s;
     }
 
     button:hover {
-      background-color: #40296A; /* Cambio de color al pasar el mouse */
+      background-color: #40296A;
     }
 
     #notesArea {
@@ -75,9 +75,9 @@
     }
 
     textarea {
-      background-color: #684B9F; /* Nuevo color morado más claro para el área de texto */
+      background-color: #684B9F;
       color: white;
-      border: 2px solid #6B07E3; /* Nuevo borde de color especificado */
+      border: 2px solid #6B07E3;
       border-radius: 5px;
       padding: 5px;
     }
@@ -94,7 +94,7 @@
     <input type="password" id="password" required>
     <br>
     <button type="button" onclick="checkPassword()">Okis Dokis</button>
-    <p id="errorText" style="color: red;"></p> <!-- Nuevo elemento para mostrar mensajes de error -->
+    <p id="errorText" style="color: red;"></p>
   </form>
 
   <!-- Área de Notas Diarias -->
@@ -108,13 +108,12 @@
   <script>
     function checkPassword() {
       var password = document.getElementById("password").value;
-      // Verificar la contraseña
       if (password === "31/05/2023") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
-        document.getElementById("title").style.marginTop = "-20px"; // Ajuste de posición del título
-        document.body.style.backgroundColor = "#6339ad"; /* Cambio de fondo al desbloquearse */
-        document.getElementById("errorText").textContent = ""; // Limpiar mensaje de error
+        document.getElementById("title").style.marginTop = "-20px";
+        document.body.style.backgroundColor = "#6339ad";
+        document.getElementById("errorText").textContent = "";
       } else {
         document.getElementById("errorText").textContent = "Contraseña incorrecta. Inténtalo de nuevo.";
       }
@@ -122,7 +121,6 @@
 
     function saveNote() {
       var note = document.getElementById("dailyNotes").value;
-      // Aquí puedes realizar acciones con la nota, como guardarla en una base de datos.
       alert("Nota guardada: " + note);
     }
   </script>
