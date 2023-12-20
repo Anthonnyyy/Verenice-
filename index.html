@@ -20,14 +20,20 @@
 
     h1, label {
       color: white;
+      font-family: "Brush Script MT", cursive;
+    }
+
+    label[for="password"] {
+      font-family: Arial, sans-serif; /* Mantener la fuente original para la etiqueta "Contraseña" */
     }
 
     #title {
       z-index: 1;
       margin-top: -40px;
       animation: changeColor 2s infinite;
-      -webkit-text-stroke: 1px #e66376; /* Ancho del borde */
-      text-stroke: 1px #e66376; /* Ancho del borde */
+      -webkit-text-stroke: 0.5px #e66376; /* Ajuste del grosor del borde */
+      text-stroke: 0.5px #e66376; /* Ajuste del grosor del borde */
+      font-size: 36px; /* Ajuste del tamaño del título */
     }
 
     @keyframes changeColor {
@@ -51,6 +57,7 @@
     #password {
       background-color: #684B9F;
       color: white;
+      font-family: Arial, sans-serif; /* Mantener la fuente original para el área de contraseña */
       border: 2px solid #6B07E3;
       border-radius: 5px;
       padding: 5px;
@@ -115,17 +122,4 @@
         document.getElementById("notesArea").style.display = "block";
         document.getElementById("title").style.marginTop = "-20px";
         document.body.style.backgroundColor = "#6339ad";
-        document.getElementById("errorText").textContent = "";
-      } else {
-        document.getElementById("errorText").textContent = "Esa no es amor, Inténtalo de nuevo ❤️";
-      }
-    }
-
-    function saveNote() {
-      var note = document.getElementById("dailyNotes").value;
-      alert("Nota guardada: " + note);
-    }
-  </script>
-
-</body>
-</html>
+        document.getElementById("errorText
