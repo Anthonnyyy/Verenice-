@@ -24,6 +24,7 @@
 
     #title {
       z-index: 1; /* Añadido para que el título esté sobre los demás elementos */
+      margin-top: -40px; /* Ajuste para subir el título */
     }
 
     #loginForm {
@@ -125,4 +126,5 @@
       // Aquí debes verificar la contraseña, por ejemplo:
       if (password === "tu_contraseña_secreta") {
         document.getElementById("loginForm").style.display = "none";
-        document.getElementById("notesArea
+        document.getElementById("notesArea").style.display = "block";
+        document.getElementById("title
