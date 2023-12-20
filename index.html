@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Página de Notas para Verenice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Privada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
 </head>
 <body>
 
-    <header class="header-bg">
-        <h1>¡Hola Mi Amorcitoo💘</h1>
-        <p>Bienvenida a tu Página de Notas</p>
-    </header>
+  <h1>Bienvenido a Mi Página Privada</h1>
 
-    <section class="note-section" style="border: 2px solid #8b5e88; padding: 40px;">
-        <h2 style="color: #8b5e88;">Notas para Mi princesita 👑💕</h2>
-        <div id="notesContainer">
-            <!-- Aquí se mostrarán las notas -->
-        </div>
-    </section>
+  <!-- Formulario de Inicio de Sesión -->
+  <form id="loginForm">
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" required>
+    <br>
+    <button type="button" onclick="checkPassword()">Iniciar Sesión</button>
+  </form>
 
-    <footer style="background-color: #c69bdd; border-top: 2px solid #8b5e88;">
-        <p style="color: #8b5e88;">&copy; 01💘 Con amor, Marlon</p>
-    </footer>
+  <!-- Área de Notas Diarias -->
+  <div id="notesArea" style="display: none; margin-top: 20px;">
+    <h2>Notas Diarias</h2>
+    <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..."></textarea>
+    <br>
+    <button onclick="saveNote()">Guardar Nota</button>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      // Aquí debes verificar la contraseña, por ejemplo:
+      if (password === "01/05/23") {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("notesArea").style.display = "block";
+      } else {
+        alert("Contraseña incorrecta. Inténtalo de nuevo.");
+      }
+    }
+
+    function saveNote() {
+      var note = document.getElementById("dailyNotes").value;
+      // Aquí puedes realizar acciones con la nota, como guardarla en una base de datos.
+      alert("Nota guardada: " + note);
+    }
+  </script>
 
 </body>
 </html>
