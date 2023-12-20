@@ -9,6 +9,25 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 50px;
+      background-color: violet; /* Nuevo fondo violeta */
+      transition: background-color 1s; /* Animación de cambio de color */
+    }
+
+    h1, label, button {
+      color: white; /* Texto blanco para mayor contraste */
+    }
+
+    #loginForm {
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el formulario */
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      transition: display 1s; /* Animación de cambio de visibilidad */
+    }
+
+    #notesArea {
+      display: none;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -25,7 +44,7 @@
   </form>
 
   <!-- Área de Notas Diarias -->
-  <div id="notesArea" style="display: none; margin-top: 20px;">
+  <div id="notesArea">
     <h2>Notas Diarias</h2>
     <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..."></textarea>
     <br>
@@ -36,9 +55,10 @@
     function checkPassword() {
       var password = document.getElementById("password").value;
       // Aquí debes verificar la contraseña, por ejemplo:
-      if (password === "01/05/23") {
+      if (password === "2023") {
         document.getElementById("loginForm").style.display = "none";
         document.getElementById("notesArea").style.display = "block";
+        document.body.style.backgroundColor = "white"; /* Cambio de fondo al desbloquearse */
       } else {
         alert("Contraseña incorrecta. Inténtalo de nuevo.");
       }
