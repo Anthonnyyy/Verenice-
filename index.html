@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <!-- ... -->
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Mi Página Privada</title>
+ <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
- <!-- ... -->
- <script>
-   const CORRECT_PASSWORD = "31/05/2023";
-   const loginForm = document.getElementById("loginForm");
-   const pdfArea = document.getElementById("pdfArea");
-   const passwordInput = document.getElementById("password");
-   const errorText = document.getElementById("errorText");
 
-   function getElement(id) {
-     return document.getElementById(id);
-   }
+ <h1 class="welcome-text">Bienvenida Amor❤️👑</h1>
 
-   function checkPassword() {
-     const password = passwordInput.value;
-     if (password === CORRECT_PASSWORD) {
-       loginForm.style.display = "none";
-       pdfArea.style.display = "block";
-       document.body.style.backgroundColor = "#6339ad";
-       errorText.textContent = "";
-     } else {
-       errorText.textContent = "Esa no es amor, Inténtalo de nuevo ❤️";
-     }
-   }
+ <form id="loginForm">
+   <label for="password">Contraseña:</label>
+   <br>
+   <input type="password" id="password" required>
+   <br>
+   <button type="button" id="button">Okis Dokis</button>
+   <p id="errorText" class="error-text"></p>
+ </form>
 
-   getElement("password").addEventListener("click", checkPassword);
- </script>
+ <div id="pdfArea">
+   <h2>Área de PDF</h2>
+   <iframe id="pdfFrame" src="tu_archivo.pdf" allowfullscreen></iframe>
+ </div>
+
+ <script src="script.js"></script>
+
 </body>
 </html>
