@@ -40,16 +40,12 @@
   }
 
   #loginForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 300px;
+    margin: 20px auto;
     background-color: #40296A;
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #6B07E3;
-    position: relative;
-    margin-top: -20px;
   }
 
   #password {
@@ -58,7 +54,7 @@
     font-family: Arial, sans-serif;
     border: 2px solid #6B07E3;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
     animation: glow 2s infinite;
   }
@@ -95,6 +91,7 @@
 
   #pdfFrame {
     width: 100%;
+    max-width: 800px;
     height: 500px; /* Ajusta la altura según tus necesidades */
     border: none;
   }
@@ -109,7 +106,7 @@
   <br>
   <input type="password" id="password" required>
   <br>
-  <button type="button" onclick="checkPassword()">Okis Dokis</button>
+  <button type="button" onclick="checkPassword()">Iniciar sesión</button>
   <p id="errorText" style="color: red;"></p>
  </form>
 
