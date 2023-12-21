@@ -1,121 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Privada</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background: url("https://i.pinimg.com/originals/a0/eb/7e/a0eb7e284058a7507395764636749c72.png") center center/cover fixed no-repeat;
-      transition: background 1s;
-    }
-
-    h1, label, button, #errorText {
-      color: white;
-    }
-
-    h1 {
-      font-family: "ADLaM Display", cursive;
-      font-weight: bold;
-      font-size: 36px;
-      margin-top: -40px;
-      animation: changeColor 2s infinite;
-      -webkit-text-stroke: 0.5px #e66376;
-      text-stroke: 0.5px #e66376;
-    }
-
-    @keyframes changeColor {
-      0%, 100% { color: #592869; }
-      25% { color: #c443c0; }
-      50% { color: #d62b5e; }
-      75% { color: #851021; }
-    }
-
-    #loginForm, #pdfArea {
-      background-color: #40296A;
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-      transition: display 1s;
-      border: 2px solid #6B07E3;
-      position: relative;
-      margin-top: -20px;
-    }
-
-    #password, textarea {
-      background-color: #684B9F;
-      color: white;
-      font-family: Arial, sans-serif;
-      border: 2px solid #6B07E3;
-      border-radius: 5px;
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      background-color: #684B9F;
-      padding: 10px;
-      border: 2px solid #6B07E3;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.5s;
-    }
-
-    button:hover {
-      background-color: #40296A;
-    }
-
-    #pdfArea {
-      display: none;
-      margin-top: 20px;
-    }
-
-    #pdfFrame {
-      width: 100%;
-      height: 500px; /* Ajusta la altura según tus necesidades */
-      border: none;
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Mi Página Privada</title>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <h1>Bienvenida Amor❤️👑</h1>
-
-  <form id="loginForm">
-    <label for="password">Contraseña:</label>
-    <br>
-    <input type="password" id="password" required>
-    <br>
-    <button type="button" onclick="checkPassword()">Okis Dokis</button>
-    <p id="errorText" style="color: red;"></p>
-  </form>
-
-  <div id="pdfArea">
-    <h2>Área de PDF</h2>
-    <iframe id="pdfFrame" src="tu_archivo.pdf" allowfullscreen></iframe>
-  </div>
-
-  <script>
-    function checkPassword() {
-      var password = document.getElementById("password").value;
-      if (password === "31/05/2023") {
-        document.getElementById("loginForm").style.display = "none";
-        document.getElementById("pdfArea").style.display = "block";
-        document.body.style.backgroundColor = "#6339ad";
-        document.getElementById("errorText").textContent = "";
-      } else {
-        document.getElementById("errorText").textContent = "Esa no es amor, Inténtalo de nuevo ❤️";
-      }
-    }
-  </script>
-
+ <h1>Bienvenida Amor❤️👑</h1>
+ <form class="login-form">
+   <label for="password">Contraseña:</label>
+   <br>
+   <input type="password" id="password" required>
+   <br>
+   <button type="button" onclick="checkPassword()">Okis Dokis</button>
+   <p id="errorText" style="color: red;"></p>
+ </form>
+ <div class="pdf-area">
+   <iframe id="pdfFrame" src="tu_archivo.pdf" allowfullscreen></iframe>
+ </div>
+ <script src="script.js"></script>
 </body>
 </html>
