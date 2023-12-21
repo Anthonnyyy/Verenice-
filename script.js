@@ -1,78 +1,13 @@
-body {
- font-family: Arial, sans-serif;
- text-align: center;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- height: 100vh;
- margin: 0;
- background: #6339ad;
- transition: background 1s;
-}
+document.getElementById("button").addEventListener("click", checkPassword);
 
-.welcome-text, .error-text {
- color: white;
-}
-
-.welcome-text {
- font-family: "ADLaM Display", cursive;
- font-weight: bold;
- font-size: 36px;
- margin-top: -40px;
- animation: changeColor 2s infinite;
- -webkit-text-stroke: 0.5px #e66376;
- text-stroke: 0.5px #e66376;
-}
-
-@keyframes changeColor {
- 0%, 100% { color: #592869; }
- 25% { color: #c443c0; }
- 50% { color: #d62b5e; }
- 75% { color: #851021; }
-}
-
-#loginForm, #pdfArea {
- background-color: #40296A;
- padding: 20px;
- border-radius: 10px;
- display: inline-block;
- transition: display 1s;
- border: 2px solid #6B07E3;
- position: relative;
- margin-top: -20px;
-}
-
-#password, textarea {
- background-color: #684B9F;
- color: white;
- font-family: Arial, sans-serif;
- border: 2px solid #6B07E3;
- border-radius: 5px;
- padding: 5px;
- margin-bottom: 10px;
-}
-
-button {
- background-color: #684B9F;
- padding: 10px;
- border: 2px solid #6B07E3;
- border-radius: 5px;
- cursor: pointer;
- transition: background-color 0.5s;
-}
-
-button:hover {
- background-color: #40296A;
-}
-
-#pdfArea {
- visibility: hidden;
- margin-top: 20px;
-}
-
-#pdfFrame {
- width: 100%;
- height: 500px; /* Ajusta la altura según tus necesidades */
- border: none;
+function checkPassword() {
+ var password = document.getElementById("password").value;
+ if (password === "31/05/2023") {
+   document.getElementById("loginForm").style.display = "none";
+   document.getElementById("pdfArea").style.visibility = "visible";
+   document.body.style.backgroundColor = "#6339ad";
+   document.getElementById("errorText").textContent = "";
+ } else {
+   document.getElementById("errorText").textContent = "Esa no es amor, Inténtalo de nuevo ❤️";
+ }
 }
