@@ -7,15 +7,15 @@ body {
  justify-content: center;
  height: 100vh;
  margin: 0;
- background: url("https://i.pinimg.com/originals/a0/eb/7e/a0eb7e284058a7507395764636749c72.png") center center/cover fixed no-repeat;
+ background: #6339ad;
  transition: background 1s;
 }
 
-h1, label, button, #errorText {
+.welcome-text, .error-text {
  color: white;
 }
 
-h1 {
+.welcome-text {
  font-family: "ADLaM Display", cursive;
  font-weight: bold;
  font-size: 36px;
@@ -32,7 +32,7 @@ h1 {
  75% { color: #851021; }
 }
 
-.login-form, .pdf-area {
+#loginForm, #pdfArea {
  background-color: #40296A;
  padding: 20px;
  border-radius: 10px;
@@ -66,14 +66,13 @@ button:hover {
  background-color: #40296A;
 }
 
-.pdf-area {
- display: none;
+#pdfArea {
+ visibility: hidden;
  margin-top: 20px;
 }
 
 #pdfFrame {
  width: 100%;
- height: 100vh;
+ height: 500px; /* Ajusta la altura según tus necesidades */
  border: none;
 }
-
