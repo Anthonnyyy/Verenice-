@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Mi Página Privada</title>
- <link rel="stylesheet" href="styles.css">
+ <!-- ... -->
 </head>
 <body>
- <h1>Bienvenida Amor❤️👑</h1>
- <form class="login-form">
-   <label for="password">Contraseña:</label>
-   <br>
-   <input type="password" id="password" required>
-   <br>
-   <button type="button" onclick="checkPassword()">Okis Dokis</button>
-   <p id="errorText" style="color: red;"></p>
- </form>
- <div class="pdf-area">
-   <iframe id="pdfFrame" src="tu_archivo.pdf" allowfullscreen></iframe>
- </div>
- <script src="script.js"></script>
+ <!-- ... -->
+ <script>
+   const CORRECT_PASSWORD = "31/05/2023";
+   const loginForm = document.getElementById("loginForm");
+   const pdfArea = document.getElementById("pdfArea");
+   const passwordInput = document.getElementById("password");
+   const errorText = document.getElementById("errorText");
+
+   function getElement(id) {
+     return document.getElementById(id);
+   }
+
+   function checkPassword() {
+     const password = passwordInput.value;
+     if (password === CORRECT_PASSWORD) {
+       loginForm.style.display = "none";
+       pdfArea.style.display = "block";
+       document.body.style.backgroundColor = "#6339ad";
+       errorText.textContent = "";
+     } else {
+       errorText.textContent = "Esa no es amor, Inténtalo de nuevo ❤️";
+     }
+   }
+
+   getElement("password").addEventListener("click", checkPassword);
+ </script>
 </body>
 </html>
