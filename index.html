@@ -46,6 +46,8 @@
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #6B07E3;
+    box-shadow: 0 0 20px #6B07E3; /* Resplandor más grande alrededor del borde */
+    animation: glow 2s infinite; /* Añadida la animación al resplandor del borde */
   }
 
   #password {
@@ -56,18 +58,18 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    animation: glow 2s infinite;
+    animation: glow 2s infinite; /* Manteniendo la animación del resplandor del #password */
   }
 
   @keyframes glow {
     0% {
-      box-shadow: 0 0 5px #ffff00;
+      box-shadow: 0 0 10px #6B07E3; /* Ajusta el tamaño del resplandor aquí */
     }
     50% {
-      box-shadow: 0 0 10px #ffff00;
+      box-shadow: 0 0 20px #6B07E3; /* Ajusta el tamaño del resplandor aquí */
     }
     100% {
-      box-shadow: 0 0 5px #ffff00;
+      box-shadow: 0 0 10px #6B07E3; /* Ajusta el tamaño del resplandor aquí */
     }
   }
 
@@ -92,7 +94,7 @@
   #pdfFrame {
     width: 100%;
     max-width: 800px;
-    height: 500px; /* Ajusta la altura según tus necesidades */
+    height: 500px;
     border: none;
   }
  </style>
