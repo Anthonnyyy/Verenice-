@@ -39,7 +39,7 @@
       75% { color: #851021; }
     }
 
-    #loginForm, #notesArea {
+    #loginForm, #pdfArea {
       background-color: #40296A;
       padding: 20px;
       border-radius: 10px;
@@ -73,9 +73,15 @@
       background-color: #40296A;
     }
 
-    #notesArea {
+    #pdfArea {
       display: none;
       margin-top: 20px;
+    }
+
+    #pdfFrame {
+      width: 100%;
+      height: 500px; /* Ajusta la altura según tus necesidades */
+      border: none;
     }
   </style>
 </head>
@@ -92,11 +98,9 @@
     <p id="errorText" style="color: red;"></p>
   </form>
 
-  <div id="notesArea">
-    <h2>Notas Diarias</h2>
-    <textarea id="dailyNotes" rows="5" cols="40" placeholder="Escribe tus notas aquí..."></textarea>
-    <br>
-    <button onclick="saveNote()">Guardar Nota</button>
+  <div id="pdfArea">
+    <h2>Área de PDF</h2>
+    <iframe id="pdfFrame" src="tu_archivo.pdf" allowfullscreen></iframe>
   </div>
 
   <script>
@@ -104,17 +108,12 @@
       var password = document.getElementById("password").value;
       if (password === "31/05/2023") {
         document.getElementById("loginForm").style.display = "none";
-        document.getElementById("notesArea").style.display = "block";
+        document.getElementById("pdfArea").style.display = "block";
         document.body.style.backgroundColor = "#6339ad";
         document.getElementById("errorText").textContent = "";
       } else {
         document.getElementById("errorText").textContent = "Esa no es amor, Inténtalo de nuevo ❤️";
       }
-    }
-
-    function saveNote() {
-      var note = document.getElementById("dailyNotes").value;
-      alert("Nota guardada: " + note);
     }
   </script>
 
