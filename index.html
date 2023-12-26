@@ -46,8 +46,8 @@
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #6B07E3;
-    box-shadow: 0 0 20px #6B07E3; /* Resplandor más grande alrededor del borde */
-    animation: glow 1s infinite; /* Añadida la animación al resplandor del borde */
+    box-shadow: 0 0 20px #6B07E3;
+    animation: glow 1s infinite;
   }
 
   #password {
@@ -58,18 +58,18 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    animation: glow 1s infinite; /* Manteniendo la animación del resplandor del #password */
+    animation: glow 1s infinite;
   }
 
   @keyframes glow {
     0% {
-      box-shadow: 0 0 10px #6B07E3; /* Ajusta el tamaño del resplandor aquí */
+      box-shadow: 0 0 10px #6B07E3;
     }
     50% {
-      box-shadow: 0 0 20px #6B07E3; /* Ajusta el tamaño del resplandor aquí */
+      box-shadow: 0 0 20px #6B07E3;
     }
     100% {
-      box-shadow: 0 0 10px #6B07E3; /* Ajusta el tamaño del resplandor aquí */
+      box-shadow: 0 0 10px #6B07E3;
     }
   }
 
@@ -91,17 +91,9 @@
     margin-top: 20px;
   }
 
-  #pdfFrame {
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
-    border: none;
-  }
  </style>
 </head>
 <body>
-
- <h1>Bienvenida Amor❤️👑</h1>
 
  <form id="loginForm">
   <label for="password">Contraseña:</label>
@@ -112,10 +104,7 @@
   <p id="errorText" style="color: red;"></p>
  </form>
 
- <div id="pdfArea">
-  <h2>Área de PDF</h2>
-  <iframe id="pdfFrame" src="tu_archivo.pdf" allowfullscreen></iframe>
- </div>
+ <div id="pdfArea"></div>
 
  <script>
   function checkPassword() {
