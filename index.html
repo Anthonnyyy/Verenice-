@@ -18,7 +18,7 @@
     transition: background 1s;
   }
 
-  h1, label, button, #errorText {
+  h1, label, button, #errorText, h2 {
     color: white;
   }
 
@@ -39,15 +39,14 @@
     75% { color: #851021; }
   }
 
-  #loginForm {
+  .form-container {
     width: 300px;
     margin: 20px auto;
-    background-color: #40296A;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #6B07E3;
-    box-shadow: 0 0 20px #6B07E3;
-    animation: glow 1s infinite;
+  }
+
+  .hidden-section {
+    display: none;
+    margin-top: 20px;
   }
 
   #password {
@@ -85,33 +84,34 @@
   button:hover {
     background-color: #40296A;
   }
-
-  #pdfArea {
-    display: none;
-    margin-top: 20px;
-  }
-
  </style>
 </head>
 <body>
 
- <form id="loginForm">
-  <label for="password">Contraseña:</label>
+ <h1>Bienvenida Amor❤️👑</h1>
+
+ <div class="form-container" id="loginForm">
+   <label for="password">Contraseña:</label>
   <br>
   <input type="password" id="password" required>
   <br>
   <button type="button" onclick="checkPassword()">Okis Dokis</button>
   <p id="errorText" style="color: red;"></p>
- </form>
+ </div>
 
- <div id="pdfArea"></div>
+ <!-- Nueva sección que se mostrará después de ingresar la contraseña -->
+ <div class="hidden-section" id="newSection">
+   <!-- No hay título aquí, solo puedes agregar contenido adicional -->
+   <h2>Nueva Sección❤️👑</h2>
+   <!-- Aquí puedes agregar cualquier contenido adicional -->
+ </div>
 
  <script>
   function checkPassword() {
     var password = document.getElementById("password").value;
     if (password === "31/05/2023") {
       document.getElementById("loginForm").style.display = "none";
-      document.getElementById("pdfArea").style.display = "block";
+      document.getElementById("newSection").style.display = "block";
       document.body.style.backgroundColor = "#6339ad";
       document.getElementById("errorText").textContent = "";
     } else {
